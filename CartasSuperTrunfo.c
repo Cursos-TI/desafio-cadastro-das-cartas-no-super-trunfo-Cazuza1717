@@ -7,16 +7,62 @@
 //Teste larissa
 
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+       /*Variaveis*/
+    char letraEstado[2];
+    char letraEstado2[2];
+    char codigoCarta[3];
+    char codigoCarta2[3];
+    char nomeCidade[50];
+    char nomeCidade2[50];
+    int populacao;
+    int populacao2;
+    float areaCidade;
+    float areaCidade2;
+    float pib;
+    float pib2;
+    int pontosTuristicos;
+    int pontosTuristicos2;
+
+    /*Entrada de dados carta 1*/
+    printf("Digite a letra para representar o estado ( Sendo da letra 'A' a 'H' ): ");
+    scanf("%s", letraEstado);
+    printf("Digite o codigo da carta (o codigo tem que obter a letra do estado mais um numero de 01 a 04): ");
+    scanf("%s", codigoCarta);
+    getchar();
+    printf("Digite o nome da cidade: ");
+    fgets(nomeCidade, 50, stdin);
+    printf("Digite a população da cidade: ");
+    scanf("%d", &populacao);
+    printf("Digite a area da cidade: (obrigatorio colocar o '.' que é usado como virgula): ");
+    scanf("%f", &areaCidade);
+    printf("Digite o PIB da cidade: (obrigatorio colocar o '.' que é usado como virgula): ");
+    scanf("%f", &pib);
+    printf("Digite quantos pontos turisticos tem a cidade: ");
+    scanf("%d", &pontosTuristicos);
+ 
+    /*Entrada carta 2*/
+    printf("Digite a letra para representar o estado ( Sendo da letra 'A' a 'H' ): ");
+    scanf("%s", letraEstado2);
+    printf("Digite o codigo da carta (o codigo tem que obter a letra do estado mais um numero de 01 a 04): ");
+    scanf("%s", codigoCarta2);
+    getchar();
+    printf("Digite o nome da cidade: ");
+    fgets(nomeCidade2, 50, stdin);
+    printf("Digite a população da cidade: ");
+    scanf("%d", &populacao2);
+    printf("Digite a area da cidade: (obrigatorio colocar o '.' que é usado como virgula): ");
+    scanf("%f", &areaCidade2);
+    printf("Digite o PIB da cidade: (obrigatorio colocar o '.' que é usado como virgula): ");
+    scanf("%f", &pib);
+    printf("Digite quantos pontos turisticos tem a cidade: ");
+    scanf("%d", &pontosTuristicos2);
+
+    /*saida carta 1*/
+    printf("\nCarta 1:\nEstado: %s\nCodigo da carta: %s%s\nNome da cidade: %sPopulação: %d\nÁrea da cidade: %fkm²\nPIB: %f\nPontos turisticos: %d", letraEstado ,letraEstado, codigoCarta , nomeCidade, populacao, areaCidade, pib, pontosTuristicos);
+
+    /*saida carta 2*/
+    printf("\nCarta 1:\nEstado: %s\nCodigo da carta: %s%s\nNome da cidade: %sPopulação: %d\nÁrea da cidade: %fkm²\nPIB: %f\nPontos turisticos: %d", letraEstado2 ,letraEstado2, codigoCarta2, nomeCidade2, populacao2, areaCidade2, pib2, pontosTuristicos2);
+
 
     return 0;
 }
