@@ -1,13 +1,7 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
-int main() {
-       /*Variaveis*/
+int main(){
+    /*Variaveis*/
     char letraEstado[2];
     char letraEstado2[2];
     char codigoCarta[3];
@@ -39,9 +33,16 @@ int main() {
     scanf("%f", &pib);
     printf("Digite quantos pontos turisticos tem a cidade: ");
     scanf("%d", &pontosTuristicos);
- 
+
+    float densidade = populacao / areaCidade;
+    float porCapta = pib / populacao;
+
+    printf("\n---------------------------------------------------------------------------------------------------\n");
+    printf("Vamos agora para a carta 2:");
+    printf("\n---------------------------------------------------------------------------------------------------\n");
+    
     /*Entrada carta 2*/
-    printf("Digite a letra para representar o estado ( Sendo da letra 'A' a 'H' ): ");
+    printf("\nDigite a letra para representar o estado ( Sendo da letra 'A' a 'H' ): ");
     scanf("%s", letraEstado2);
     printf("Digite o codigo da carta (o codigo tem que obter a letra do estado mais um numero de 01 a 04): ");
     scanf("%s", codigoCarta2);
@@ -56,13 +57,19 @@ int main() {
     scanf("%f", &pib);
     printf("Digite quantos pontos turisticos tem a cidade: ");
     scanf("%d", &pontosTuristicos2);
+ 
+    float densidade2 = populacao2 / areaCidade2;
+    float porCapta2 = pib2 / populacao2;
 
     /*saida carta 1*/
-    printf("\nCarta 1:\nEstado: %s\nCodigo da carta: %s%s\nNome da cidade: %sPopulação: %d\nÁrea da cidade: %fkm²\nPIB: %f\nPontos turisticos: %d", letraEstado ,letraEstado, codigoCarta , nomeCidade, populacao, areaCidade, pib, pontosTuristicos);
+    printf("\nCarta 1:\nEstado: %s\nCodigo da carta: %s%s\nNome da cidade: %sPopulação: %.2d\nÁrea da cidade: %.2fkm²\nPIB: %2.f\nPontos turisticos: %d\nDensidade demografica: %.2f hab/km²\nPIB por capta: %.2f\n", letraEstado ,letraEstado, codigoCarta , nomeCidade, populacao, areaCidade, pib, pontosTuristicos,densidade,porCapta);
+    printf("\n---------------------------------------------------------------------------------------------------\n");
 
     /*saida carta 2*/
-    printf("\nCarta 1:\nEstado: %s\nCodigo da carta: %s%s\nNome da cidade: %sPopulação: %d\nÁrea da cidade: %fkm²\nPIB: %f\nPontos turisticos: %d", letraEstado2 ,letraEstado2, codigoCarta2, nomeCidade2, populacao2, areaCidade2, pib2, pontosTuristicos2);
-
+    printf("\nCarta 1:\nEstado: %s\nCodigo da carta: %s%s\nNome da cidade: %sPopulação: %.2d\nÁrea da cidade: %2.fkm²\nPIB: %2.f\nPontos turisticos: %d\nDensidade demografica: %.2f hab/km²\nPIB por capta: %.2f", letraEstado2 ,letraEstado2, codigoCarta2, nomeCidade2, populacao2, areaCidade2, pib2, pontosTuristicos2);
 
     return 0;
+    
+
+    
 }
